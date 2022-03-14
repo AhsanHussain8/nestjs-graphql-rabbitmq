@@ -16,7 +16,8 @@ From the root directory, run the following command:
 `docker-compose up`
 
 # Starting the API
-Navigate to the `backend` directory and run the following command: 
+Navigate to the `backend` directory and run the following commands: 
+`npm i`
 `npm run start:dev`	
 Visit http://localhost:3000/graphql to use the GraphQL API and to create edges. 
 
