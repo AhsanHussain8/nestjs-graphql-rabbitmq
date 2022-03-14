@@ -25,11 +25,11 @@ Visit http://localhost:3000/graphql to use the GraphQL API and to create edges.
 # Sending Messages from RabbitMQ
 The API has a RabbitMQ message handler. To send an update alias message, navigate to http://localhost:15672/#/exchanges/%2F/alias-update. The handler is accepting messages on this exchange with `routing-key` empty. The payload  is in JSON format with the schema: 
 
-    `{
+    gi{
       node1_alias: String,
       node2_alias: String,
       id: Int
-    }`
+    }
 The payload must be valid for the handler to receive the message. 
 
 ##. Other Notes 
