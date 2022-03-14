@@ -1,0 +1,39 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Edge {
+  id: Int!
+  capacity: Int!
+  node1_alias: String!
+  node2_alias: String!
+  created_at: DateTime!
+  updated_at: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getEdges: [Edge]!
+  getEdge(id: Int!): Edge
+}
+
+type Mutation {
+  createEdge(createEdgeInput: CreateEdgeInput!): Edge!
+  updateEdge(updateEdgeInput: UpdateEdgeInput!): Edge!
+  removeEdge(id: Int!): Edge!
+}
+
+input CreateEdgeInput {
+  node1_alias: String!
+  node2_alias: String!
+}
+
+input UpdateEdgeInput {
+  node1_alias: String
+  node2_alias: String
+  id: Int!
+}
